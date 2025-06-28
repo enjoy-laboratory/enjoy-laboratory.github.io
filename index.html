@@ -3,99 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>東海大学 超越知能未来研究所</title>
+  <title>超越知能未来研究所</title>
   <style>
-    :root {
-      --bg-color: #111;
-      --text-color: #f0f0f0;
-      --accent-color: #ff4081;
-      --box-bg: #222;
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      height: 100%;
+      color: #fff;
+      background: #000;
+      overflow-x: hidden;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.7;
+    video#bg-video {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+      opacity: 0.2;
     }
 
     header {
-      background-color: var(--accent-color);
-      padding: 1.5em;
       text-align: center;
+      padding: 3em 1em 1em 1em;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
     }
 
     header h1 {
+      font-size: 2.5em;
       margin: 0;
-      font-size: 2em;
       letter-spacing: 0.1em;
-      color: white;
+      animation: fadein 2s ease-out forwards;
     }
 
     nav {
       display: flex;
       justify-content: center;
-      background-color: var(--box-bg);
-      padding: 1em;
-      gap: 2em;
       flex-wrap: wrap;
+      gap: 2em;
+      margin: 1em 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1em;
+      backdrop-filter: blur(5px);
     }
 
     nav a {
-      color: var(--text-color);
+      color: #00e5ff;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav a:hover {
-      color: var(--accent-color);
+      color: #ff4081;
     }
 
     section {
       padding: 2em;
       max-width: 960px;
       margin: auto;
+      animation: fadein 1s ease-out forwards;
     }
 
     .box {
-      background-color: var(--box-bg);
+      background-color: rgba(30, 30, 30, 0.8);
       padding: 1.5em;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 2em;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
     }
 
     h2 {
-      border-left: 5px solid var(--accent-color);
+      border-left: 5px solid #ff4081;
       padding-left: 0.6em;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 1.2em;
     }
 
     footer {
       text-align: center;
       padding: 1em;
-      background-color: #000;
-      color: #aaa;
       font-size: 0.9em;
+      background-color: rgba(0, 0, 0, 0.6);
     }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
+  <video autoplay muted loop id="bg-video">
+    <source src="1851190-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+    <!-- フォールバックメッセージ -->
+    Your browser does not support HTML5 video.
+  </video>
+
   <header>
-    <h1>東海大学 超越知能未来研究所</h1>
+    <h1>超越知能未来研究所</h1>
   </header>
 
   <nav>
     <a href="#about">概要</a>
     <a href="#projects">プロジェクト</a>
     <a href="#members">構成員</a>
-    <a href="#publications">成果</a>
     <a href="#contact">連絡先</a>
   </nav>
 
@@ -103,21 +126,21 @@
     <div class="box">
       <h2>研究概要</h2>
       <p>
-        我々の研究所では，量子脳リンクAIの実装，次元超越型自己複製知性体の設計，および異世界転送プロトコルの開発を通じて，
-        人類の認知限界を突破するための知的基盤構築を行っている．近年では猫語翻訳機と夢記録装置の共同研究も進行中である．
+        我々は「次元」と「意識」の境界領域に挑み，非現実的な現象を技術で再構築することを目的としている．
+        特に夢・感情・幻影といった非数値データの形式知化と，次元間計算理論の構築を進めている．
       </p>
     </div>
   </section>
 
   <section id="projects">
     <div class="box">
-      <h2>主要プロジェクト</h2>
+      <h2>プロジェクト</h2>
       <ul>
-        <li>パラレルワールド同期実験：夢と現実の境界を可視化する</li>
-        <li>可食型データ記録媒体の開発：クラッカーに情報を刻む</li>
-        <li>AIによる俳句自動生成とその情緒スコアリング</li>
-        <li>未知の生物とのゼロショット対話インターフェース構築</li>
-        <li>「ひとりUNO」の戦略理論と自律AI対戦機構</li>
+        <li>次元転送プロトコルのエミュレーション</li>
+        <li>幻覚生成ニューラルネットワーク（HG-NN）</li>
+        <li>ねこ語による宇宙航行制御言語（MeowLang）の開発</li>
+        <li>クラッカー型データ媒体に関する可食性試験</li>
+        <li>夢予報AI「ユメみるぞう」の社会実装</li>
       </ul>
     </div>
   </section>
@@ -126,21 +149,10 @@
     <div class="box">
       <h2>構成員</h2>
       <ul>
-        <li><strong>所長：</strong> 湯呑 光速（次元跳躍アルゴリズム）</li>
-        <li><strong>副所長：</strong> 魚住 未来（エーテル通信工学）</li>
-        <li><strong>博士課程：</strong> 天野 ひかり（光の粒子で動くディープラーニング）</li>
-        <li><strong>修士課程：</strong> 橘 拓（脳内音声の可視化）</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="publications">
-    <div class="box">
-      <h2>主要成果（未査読）</h2>
-      <ul>
-        <li>Hikaru, A. (2025). *Training Light Particles for Consciousness*. Journal of Transdimensional AI (JTAI).</li>
-        <li>Utsumi, M. (2024). *Zero-Entropy Protocol for Multiverse Negotiation*. Proceedings of DreamTech Summit.</li>
-        <li>Tachibana, T. (2024). *On the Visual Structure of Internal Monologue*. Preprint at arXImaginary.</li>
+        <li><strong>所長：</strong> ドクター・ノイズ（幻聴干渉理論）</li>
+        <li><strong>副所長：</strong> みけねこ先生（言語：MeowLang）</li>
+        <li><strong>助教授：</strong> 夢野 こころ（夢記録学）</li>
+        <li><strong>M2：</strong> 星川 りん（宇宙マインドマッピング）</li>
       </ul>
     </div>
   </section>
@@ -148,14 +160,13 @@
   <section id="contact">
     <div class="box">
       <h2>連絡先</h2>
+      <p>メール：dream-core†fictional-lab.ai</p>
       <p>住所：新宿区 愛住町 18-7</p>
-      <p>メール：quantum_cat†lab.ai</p>
-      <p>備考：テレパシーによる連絡も可</p>
     </div>
   </section>
 
   <footer>
-    © 2025 超越知能未来研究所．This institute is a fiction.
+    This institute is a fiction. 2025 超越知能未来研究所
   </footer>
 </body>
 </html>
