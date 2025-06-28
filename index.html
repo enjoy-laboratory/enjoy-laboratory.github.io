@@ -6,11 +6,10 @@
   <title>東海大学 知能情報研究室</title>
   <style>
     :root {
-      --bg-color: #121212;
-      --text-color: #ffffff;
-      --accent-color: #00bcd4;
-      --box-bg: #1e1e1e;
-      --hover-color: #26c6da;
+      --bg-color: #1b1b1b;
+      --text-color: #f0f0f0;
+      --accent-color: #3399ff;
+      --box-bg: #2a2a2a;
     }
 
     body {
@@ -18,27 +17,28 @@
       font-family: 'Helvetica Neue', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     header {
       background-color: var(--accent-color);
-      padding: 1.2em;
+      padding: 1.5em;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.8em;
-      letter-spacing: 0.05em;
+      font-size: 2em;
+      letter-spacing: 0.1em;
+      color: white;
     }
 
     nav {
-      background-color: var(--box-bg);
       display: flex;
       justify-content: center;
-      gap: 2em;
+      background-color: var(--box-bg);
       padding: 1em;
+      gap: 2em;
       flex-wrap: wrap;
     }
 
@@ -49,7 +49,7 @@
     }
 
     nav a:hover {
-      color: var(--hover-color);
+      color: var(--accent-color);
     }
 
     section {
@@ -61,19 +61,19 @@
     .box {
       background-color: var(--box-bg);
       padding: 1.5em;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-bottom: 2em;
     }
 
     h2 {
       border-left: 5px solid var(--accent-color);
-      padding-left: 0.5em;
+      padding-left: 0.6em;
     }
 
     footer {
       text-align: center;
       padding: 1em;
-      background-color: #101010;
+      background-color: #141414;
       color: #aaa;
       font-size: 0.9em;
     }
@@ -88,23 +88,36 @@
 </head>
 <body>
   <header>
-    <h1>知能情報研究室（Tokai AI Lab）</h1>
+    <h1>東海大学 知能情報研究室</h1>
   </header>
 
   <nav>
-    <a href="#about">研究内容</a>
+    <a href="#about">研究概要</a>
+    <a href="#projects">プロジェクト</a>
     <a href="#members">メンバー</a>
     <a href="#publications">論文</a>
-    <a href="#contact">お問い合わせ</a>
+    <a href="#contact">連絡先</a>
   </nav>
 
   <section id="about">
     <div class="box">
-      <h2>研究内容</h2>
+      <h2>研究概要</h2>
       <p>
-        知能情報研究室では，人工知能（AI），機械学習，強化学習，およびゲームAI（麻雀，囲碁など）を中心に研究を行っている．
-        特に不完全情報ゲームにおける戦略学習，対戦相手推論，マルチエージェント強化学習などをテーマとして取り上げている．
+        当研究室は，次世代の情報処理技術の確立を目指し，知識処理，自然言語理解，ロボティクス，および社会知能システムの研究を行っている．
+        理論と実装の両面からアプローチし，実世界への応用可能性を追求している．
       </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="box">
+      <h2>プロジェクト</h2>
+      <ul>
+        <li>多言語対話システムの開発</li>
+        <li>人間共生型ロボットとのインタラクションモデル</li>
+        <li>高信頼分散AIによる災害予測支援</li>
+        <li>デジタル社会における倫理的AI設計</li>
+      </ul>
     </div>
   </section>
 
@@ -112,11 +125,11 @@
     <div class="box">
       <h2>メンバー</h2>
       <ul>
-        <li><strong>教授：</strong> 鈴木 太郎（人工知能・ゲーム理論）</li>
-        <li><strong>助教：</strong> 佐藤 花子（強化学習・多腕バンディット）</li>
-        <li><strong>D3：</strong> 中村 未来（麻雀AI・テンパイ推論）</li>
-        <li><strong>M2：</strong> 田中 一郎（CNNによる役分類）</li>
-        <li><strong>M1：</strong> 山本 結衣（自己対戦強化学習）</li>
+        <li><strong>教授：</strong> 小林 真一（知識情報処理）</li>
+        <li><strong>准教授：</strong> 江口 美咲（自然言語処理）</li>
+        <li><strong>助教：</strong> 藤田 健吾（マルチモーダル学習）</li>
+        <li><strong>博士後期課程：</strong> 林 拓也</li>
+        <li><strong>修士課程：</strong> 佐々木 優，長谷川 彩，加藤 慎吾</li>
       </ul>
     </div>
   </section>
@@ -125,30 +138,24 @@
     <div class="box">
       <h2>論文</h2>
       <ul>
-        <li>
-          Nakamura, M., Suzuki, T. (2025). *Hidden State Inference in Mahjong using Auxiliary Task Reinforcement Learning*. NeurIPS 2025.
-        </li>
-        <li>
-          Tanaka, I., Sato, H. (2024). *Automatic Classification of Yaku Using Deep CNNs*. IEEE CIG.
-        </li>
-        <li>
-          Yamamoto, Y. (2024). *Multi-agent Self-play for Incomplete Information Games*. AAAI Workshop.
-        </li>
+        <li>Kobayashi, S., Eguchi, M. (2025). *Robust Dialogue Management with Trust-Aware Modulation*. IJCAI.</li>
+        <li>Fujita, K., Sasaki, Y. (2024). *Multimodal Learning in Assistive Robotics*. IEEE Transactions on AI.</li>
+        <li>Hasegawa, A., Kato, S. (2023). *Ethical Reasoning in Autonomous Agents*. AAAI Spring Symposium.</li>
       </ul>
     </div>
   </section>
 
   <section id="contact">
     <div class="box">
-      <h2>お問い合わせ</h2>
-      <p>所在地：東海大学 工学部 情報工学科</p>
-      <p>メール：tokai.ai.lab@example.ac.jp</p>
+      <h2>連絡先</h2>
+      <p>所在地：東海大学 工学部 知能情報工学科</p>
+      <p>メール：info.ai-lab@example.ac.jp</p>
       <p>住所：〒123-4567 神奈川県平塚市東海大学1-1</p>
     </div>
   </section>
 
   <footer>
-    © 2025 Tokai University AI Lab. All rights reserved.
+    © 2025 Tokai University Intelligent Systems Lab
   </footer>
 </body>
 </html>
