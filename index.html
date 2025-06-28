@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>東海大学 知能情報研究室</title>
+  <style>
+    :root {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --accent-color: #00bcd4;
+      --box-bg: #1e1e1e;
+      --hover-color: #26c6da;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      padding: 1.2em;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      letter-spacing: 0.05em;
+    }
+
+    nav {
+      background-color: var(--box-bg);
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 1em;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--hover-color);
+    }
+
+    section {
+      padding: 2em;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    .box {
+      background-color: var(--box-bg);
+      padding: 1.5em;
+      border-radius: 10px;
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      border-left: 5px solid var(--accent-color);
+      padding-left: 0.5em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #101010;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>知能情報研究室（Tokai AI Lab）</h1>
+  </header>
+
+  <nav>
+    <a href="#about">研究内容</a>
+    <a href="#members">メンバー</a>
+    <a href="#publications">論文</a>
+    <a href="#contact">お問い合わせ</a>
+  </nav>
+
+  <section id="about">
+    <div class="box">
+      <h2>研究内容</h2>
+      <p>
+        知能情報研究室では，人工知能（AI），機械学習，強化学習，およびゲームAI（麻雀，囲碁など）を中心に研究を行っている．
+        特に不完全情報ゲームにおける戦略学習，対戦相手推論，マルチエージェント強化学習などをテーマとして取り上げている．
+      </p>
+    </div>
+  </section>
+
+  <section id="members">
+    <div class="box">
+      <h2>メンバー</h2>
+      <ul>
+        <li><strong>教授：</strong> 鈴木 太郎（人工知能・ゲーム理論）</li>
+        <li><strong>助教：</strong> 佐藤 花子（強化学習・多腕バンディット）</li>
+        <li><strong>D3：</strong> 中村 未来（麻雀AI・テンパイ推論）</li>
+        <li><strong>M2：</strong> 田中 一郎（CNNによる役分類）</li>
+        <li><strong>M1：</strong> 山本 結衣（自己対戦強化学習）</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="box">
+      <h2>論文</h2>
+      <ul>
+        <li>
+          Nakamura, M., Suzuki, T. (2025). *Hidden State Inference in Mahjong using Auxiliary Task Reinforcement Learning*. NeurIPS 2025.
+        </li>
+        <li>
+          Tanaka, I., Sato, H. (2024). *Automatic Classification of Yaku Using Deep CNNs*. IEEE CIG.
+        </li>
+        <li>
+          Yamamoto, Y. (2024). *Multi-agent Self-play for Incomplete Information Games*. AAAI Workshop.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="box">
+      <h2>お問い合わせ</h2>
+      <p>所在地：東海大学 工学部 情報工学科</p>
+      <p>メール：tokai.ai.lab@example.ac.jp</p>
+      <p>住所：〒123-4567 神奈川県平塚市東海大学1-1</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Tokai University AI Lab. All rights reserved.
+  </footer>
+</body>
+</html>
